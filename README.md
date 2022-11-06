@@ -1,8 +1,8 @@
 <h1 align="center">Discord Oauth</h1>
 <p align="center">
 <a href="https://discord.gg/pP4mKKbRvk"><img src="https://discord.com/api/guilds/986344051110473769/embed.png" alt="discord"></a>
-<a href="https://pypi.org/project/ciberedev.py"><img src="https://img.shields.io/pypi/v/ciberedev.py.svg" alt="pypi"></a>
-<a href="https://github.com/cibere/ciberedev.py/blob/main/LICENSE"><img src="https://img.shields.io/github/license/cibere/ciberedev.py" alt="license"></a>
+<a href="https://pypi.org/project/discord-oauth"><img src="https://img.shields.io/pypi/v/discord-oauth.svg" alt="pypi"></a>
+<a href="https://github.com/cibere/discord-oauth/blob/main/LICENSE"><img src="https://img.shields.io/github/license/cibere/discord-oauth" alt="license"></a>
 </p>
 <p align="center">Python Wrapper for discords oauth2</p>
 
