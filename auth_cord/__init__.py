@@ -1,5 +1,5 @@
 """
-discord-oauth
+auth-cord
 ~~~~~~~~~~~~~~~~~~~
 A basic wrapper discord oauth2
 """
