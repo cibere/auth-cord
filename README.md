@@ -31,7 +31,7 @@ python -m pip install -U git+https://github.com/cibere/auth-cord # requires git 
 <h2>FAQ</h2>
 
 > Q: I don't have a webserver, can I still use discords oauth?<br>
-> A: Yes! You can set the redirect_url to `https://api.cibere.dev/discord_oauth`, and tell the user to give your bot the given code.<br>
+> A: Yes! You can set the redirect_url to `https://api.cibere.dev/auth_cord`, and tell the user to give your bot the given code.<br>
 
 <h2>Examples</h2>
 Get user info
@@ -61,7 +61,7 @@ async def main():
         # getting the users connections
         user = await client.get_user_info(
             token.token
-        )  # 'token' is a 'discord_oauth.token.Token' object
+        )  # 'token' is a 'auth_cord.token.Token' object
 
         # printing the users id
         print(user.id)

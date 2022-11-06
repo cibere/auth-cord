@@ -22,7 +22,7 @@ async def main():
         # getting the users guilds
         guilds = await client.get_user_guilds(
             token.token
-        )  # 'token' is a 'discord_oauth.token.Token' object
+        )  # 'token' is a 'auth_cord.token.Token' object
 
         # printing the first guilds id
         print(guilds[0].id)

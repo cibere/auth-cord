@@ -22,7 +22,7 @@ async def main():
         # getting the users connections
         user = await client.get_user_info(
             token.token
-        )  # 'token' is a 'discord_oauth.token.Token' object
+        )  # 'token' is a 'auth_cord.token.Token' object
 
         # printing the users id
         print(user.id)
