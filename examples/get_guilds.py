@@ -1,16 +1,16 @@
 import asyncio
 
-import discord_oauth
+import auth_cord
 
 # creating our authorization object
-auth = discord_oauth.Authorization(
+auth = auth_cord.Authorization(
     client_id=123,
     client_secret="...",
     redirect_url="...",
 )
 
 # creating our client instance and passing our authorization
-client = discord_oauth.Client(authorization=auth)
+client = auth_cord.Client(authorization=auth)
 
 
 async def main():
