@@ -18,7 +18,7 @@ setuptools.setup(
         "Issue tracker": "https://github.com/cibere/auth_cord/issues",
         "Discord/Support Server": "https://discord.gg/2MRrJvP42N",
     },
-    version=auth_cord.__version__,
+    version=auth_cord.__FULL_VERSION__,
     python_requires=">=3.8",
     install_requires=REQUIREMENTS,
     packages=["auth_cord"],
