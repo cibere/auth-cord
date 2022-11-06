@@ -1,8 +1,8 @@
-<h1 align="center">Discord Oauth</h1>
+<h1 align="center">Auth Cord</h1>
 <p align="center">
 <a href="https://discord.gg/pP4mKKbRvk"><img src="https://discord.com/api/guilds/986344051110473769/embed.png" alt="discord"></a>
-<a href="https://pypi.org/project/discord-oauth"><img src="https://img.shields.io/pypi/v/discord-oauth.svg" alt="pypi"></a>
-<a href="https://github.com/cibere/discord-oauth/blob/main/LICENSE"><img src="https://img.shields.io/github/license/cibere/discord-oauth" alt="license"></a>
+<a href="https://pypi.org/project/auth-cord"><img src="https://img.shields.io/pypi/v/auth-cord.svg" alt="pypi"></a>
+<a href="https://github.com/cibere/auth-cord/blob/main/LICENSE"><img src="https://img.shields.io/github/license/cibere/auth-cord" alt="license"></a>
 </p>
 <p align="center">Python Wrapper for discords oauth2</p>
 
@@ -19,13 +19,13 @@ Support for the following endpoints<br>
 Install from pip
 
 ```
-python -m pip install -U discord-oauth
+python -m pip install -U auth-cord
 ```
 
 Install from github
 
 ```bash
-python -m pip install -U git+https://github.com/cibere/discord-oauth # requires git to be installed
+python -m pip install -U git+https://github.com/cibere/auth-cord # requires git to be installed
 ```
 
 <h2>FAQ</h2>
@@ -38,17 +38,40 @@ Get user info
 
 ```py
 import asyncio
-import ciberedev
 
-client = ciberedev.Client()
+import discord_oauth
+
+# creating our authorization object
+auth = discord_oauth.Authorization(
+    client_id=123,
+    client_secret="...",
+    redirect_url="...",
+)
+
+# creating our client instance and passing our authorization
+client = discord_oauth.Client(authorization=auth)
+
 
 async def main():
-  async with client:
-    paste = await client.create_paste("my_paste_text")
-    print(paste.url)
+    # starting our client
+    async with client:
+        # exchanging our code with discord for a token
+        token = await client.exchange_code("...")
 
+        # getting the users connections
+        user = await client.get_user_info(
+            token.token
+        )  # 'token' is a 'discord_oauth.token.Token' object
+
+        # printing the users id
+        print(user.id)
+
+
+# checking if this file is the one that was run
 if __name__ == "__main__":
-  asyncio.run(main())
+    # if so, run the main function
+    asyncio.run(main())
+
 ```
 
-See <a href="https://github.com/cibere/ciberedev.py/tree/main/examples">the examples folder</a> for a full list of examples
+See <a href="https://github.com/cibere/auth-cord/tree/main/examples">the examples folder</a> for a full list of examples
