@@ -8,11 +8,11 @@
 
 <h2>Key Features</h2>
 Support for the following endpoints<br>
- - exchange code for token
- - refresh token
- - get user connections
- - get user guilds
- - get user info
+ - exchange code for token<br>
+ - refresh token<br>
+ - get user connections<br>
+ - get user guilds<br>
+ - get user info<br>
 
 <h2>Installing</h2>
 <span style="font-weight: bold;">Python 3.8 or higher is required</span>
@@ -30,8 +30,8 @@ python -m pip install -U git+https://github.com/cibere/discord-oauth # requires 
 
 <h2>FAQ</h2>
 
-> Q: I don't have a webserver, can I still use discords oauth?
-> A: Yes! You can set the redirect_url to `https://api.cibere.dev/discord_oauth`, and tell the user to give your bot the given code.
+> Q: I don't have a webserver, can I still use discords oauth?<br>
+> A: Yes! You can set the redirect_url to `https://api.cibere.dev/discord_oauth`, and tell the user to give your bot the given code.<br>
 
 <h2>Examples</h2>
 Get user info
