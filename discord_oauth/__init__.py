@@ -1,0 +1,11 @@
+"""
+discord-oauth
+~~~~~~~~~~~~~~~~~~~
+A basic wrapper discord oauth2
+"""
+
+__description__ = "A basic wrapper discord oauth2"
+__version__ = "0.1.0"
+
+from .authorization import Authorization
+from .client import Client
