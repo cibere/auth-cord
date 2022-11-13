@@ -31,19 +31,13 @@ class Client:
     ) -> None:
         await self.close()
 
-    async def start(self, session: Optional[ClientSession] = None) -> None:
-        """Starts the client
+    async def start(self) -> None:
+        """Starts the client"""
 
-        :session: if you already have an aiohttp session that you would like to be used, you can pass it here
-        """
-
-        self._session = session or ClientSession()
+        self._session = ClientSession()
 
     async def close(self) -> None:
-        """Closes the client
-
-        IF YOU PROVIDED A SESSION, THIS WILL CLOSE IT
-        """
+        """Closes the client"""
 
         await self._session.close()
 
